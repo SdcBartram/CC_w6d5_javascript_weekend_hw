@@ -23,7 +23,16 @@ Decorator.prototype.enoughPaint = function (room) {
 Decorator.prototype.paintRoom = function (room) {
     if (this.enoughPaint(room)) {
         room.paintStatus = true;
+        for (const paintCan of this.paintStock) {
+            paintCan.emptyPaintCan();
+        }
         return true;
+    }
+}
+
+Decorator.prototype.removePaintCan = function () {
+    if (this.paintStock.litres === 0) {
+        this.paintStock.paintCan.
     }
 }
 

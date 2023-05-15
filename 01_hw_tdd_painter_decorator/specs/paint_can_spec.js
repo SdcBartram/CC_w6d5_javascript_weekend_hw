@@ -32,4 +32,8 @@ describe ('PaintCan', function() {
         const actual = paintCanGreen.isPaintCanEmpty()
         assert.strictEqual(actual, true)
     })
+
+    it ('should be able to remove empty paint cans from stock', function () {
+        
+    })
 });

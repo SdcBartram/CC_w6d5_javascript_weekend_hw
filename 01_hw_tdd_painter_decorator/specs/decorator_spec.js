@@ -61,5 +61,17 @@ describe ('Decorator', function() {
         const actual = kitchen.paintStatus;
         assert.strictEqual(actual, false)
     })
-    
+
+    // EXTENSION //
+
+    it ('should be able to decrease the amount of paint in stock when painting a room', function () {
+        bob.addPaint(paintCanBlue)
+        bob.paintRoom(kitchen)
+        const actual = paintCanBlue.isPaintCanEmpty()
+        assert.strictEqual(actual, true)
+    })
+
+    xit ('should be able to remove empty paint cans from stock', function () {
+
+    })
 });
